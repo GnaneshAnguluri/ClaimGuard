@@ -27,12 +27,6 @@ MENUS: dict[str, list[tuple[str, str, str]]] = {
         ("res-faq", "FAQ", "Short answers to common questions"),
         ("res-github", "GitHub & docs", "Code and how to run it"),
     ],
-    "About": [
-        ("about-vision", "Our vision", "Why we built ClaimGuard"),
-        ("about-problem", "The problem we solve", "The challenge in plain words"),
-        ("about-team", "Team", "Who built what"),
-        ("about-contact", "Contact", "Get in touch"),
-    ],
 }
 PAGE_TITLES = {pid: title for items in MENUS.values() for pid, title, _ in items}
 PAGE_TITLES.update({"home": "Home", "analyze": "Analyze a claim"})

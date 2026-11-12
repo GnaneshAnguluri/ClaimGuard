@@ -144,8 +144,8 @@ def test_flagged_selfie_alone_is_high_risk():
 
 # ---------------------------------------------------------------- UI wiring (no dead menu links)
 def test_every_menu_link_has_a_page():
-    from ui import nav, pages_about, pages_resources, pages_solutions, pages_tech
-    pages = {**pages_tech.PAGES, **pages_solutions.PAGES, **pages_resources.PAGES, **pages_about.PAGES}
+    from ui import nav, pages_resources, pages_solutions, pages_tech
+    pages = {**pages_tech.PAGES, **pages_solutions.PAGES, **pages_resources.PAGES}
     linked = {pid for items in nav.MENUS.values() for pid, _, _ in items}
     assert linked == set(pages)
 
